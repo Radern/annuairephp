@@ -323,14 +323,12 @@ class Personne
      * @param
      *            integer id
      */
-    public function deletePersonne($id)
+    public function deletePersonne()
     {
-        if ($id == $idd) {
             $idd = $this->getId();
             $this->getAdresse()->deleteAdresse();
             $this->getTelephone()->deleteTelephone();
-            $result = requete0("DELETE FROM personne WHERE id='$id'");
-        }
+            $result = requete0("DELETE FROM personne WHERE id='$idd'");
     }
 
     /**
